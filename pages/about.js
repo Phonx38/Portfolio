@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import {
   FaFileDownload,
@@ -11,18 +12,20 @@ import {
 
 const SideLink = (props) => {
   return (
-    <div className="cursor-pointer border-2 border-indigo-500  duration-150 rounded-lg my-2">
-      <h1 className="px-4 py-2 text-gray-300 font-bold  press2p text-xl flex justify-center items-center   ">
-        <span className="mr-5">{props.icon}</span>
-        {props.name}
-      </h1>
-    </div>
+    <a target="_blank" rel="noopener noreferrer" href={props.link}>
+      <div className="cursor-pointer border-b-2 border-gray-600   duration-150   hover:bg-indigo-500 hover:text-white">
+        <h1 className="px-4 py-2 text-gray-300 hover:text-white duration-150 font-bold my-2  press2p text-xl flex justify-center items-center   ">
+          <span className="mr-5">{props.icon}</span>
+          {props.name}
+        </h1>
+      </div>
+    </a>
   );
 };
 
 function About() {
   return (
-    <div className="flex flex-col container bg-black md:p-10 w-full   md:pt-40 pt-40  pb-10  ">
+    <div className="flex flex-col items-center container bg-black md:p-10 w-full   md:pt-40 pt-40  pb-10  ">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12  text-white md:px-10 px-5 ">
         <div className="lg:col-span-9 col-span-1">
           <div className="flex flex-col">
@@ -53,13 +56,25 @@ function About() {
         </div>
         <div className=" col-span-1 lg:col-span-3">
           <div className="lg:sticky relative md:top-40 top-8">
-            <div className=" flex flex-col ">
-              <SideLink name="Github" icon={<FaGithub />} />
-              <SideLink name="Linkedin" icon={<FaLinkedinIn />} />
-              <SideLink name="Instagram" icon={<FaInstagram />} />
-              <SideLink name="Mail me" icon={<FaGoogle />} />
-              <SideLink name="Twitter" icon={<FaTwitter />} />
-              <SideLink name="My Resume" icon={<FaFileDownload />} />
+            <div className=" flex flex-col bg-gray-900  ">
+              <SideLink
+                link="https://github.com/Phonx38"
+                name="Github"
+                icon={<FaGithub />}
+              />
+              <SideLink
+                link="https://www.linkedin.com/in/ashutosh-t-7aa966117/"
+                name="Linkedin"
+                icon={<FaLinkedinIn />}
+              />
+              <SideLink
+                link="https://www.instagram.com/happy_and_hungry_/"
+                name="Instagram"
+                icon={<FaInstagram />}
+              />
+              <SideLink link="" name="Mail me" icon={<FaGoogle />} />
+              <SideLink link="" name="Twitter" icon={<FaTwitter />} />
+              <SideLink link="#" name="My Resume" icon={<FaFileDownload />} />
             </div>
           </div>
         </div>

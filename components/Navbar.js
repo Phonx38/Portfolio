@@ -92,7 +92,7 @@ const Navbar = () => {
       <MobileNav open={open} setOpen={setOpen} />
       <Link href="/">
         <div className=" cursor-pointer">
-          <h1 className="text-2xl player text-transparent bg-clip-text bg-gradient-to-r  from-rose-500 via-red-400 to-red-500">
+          <h1 className="text-xl md:text-2xl player text-transparent bg-clip-text bg-gradient-to-r  from-rose-500 via-red-400 to-red-500">
             blocks
             <br />
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-red-400 to-red-500">
@@ -104,7 +104,7 @@ const Navbar = () => {
       </Link>
 
       <div
-        className="z-50 flex relative w-8 h-6 flex-col justify-between items-center md:hidden"
+        className="z-50 flex relative w-8 h-5 flex-col justify-between items-center md:hidden"
         onClick={() => {
           setOpen(!open);
         }}
@@ -129,21 +129,20 @@ const Navbar = () => {
 
       <div className="hidden md:flex justify-evenly items-center">
         <Link href="/about">
-          <h1 className="px-3 text-md font-semibold cursor-pointer player">
+          <h1 className="px-3 text-md font-semibold cursor-pointer player hover:text-purple-600 duration-150">
             About
           </h1>
         </Link>
         <Link href="/posts">
-          <h1 className="px-3 text-md font-semibold cursor-pointer player">
+          <h1 className="px-3 text-md font-semibold cursor-pointer player hover:text-purple-600 duration-15">
             Blogs
           </h1>
         </Link>
-
-        <div className="  mx-3 bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800 px-5 py-3 rounded-lg shadow-lg cursor-pointer">
-          <h1 className="text-white font-bold text-sm player ">
-            Connect Wallet
-          </h1>
-        </div>
+        <Link href="/mintnft">
+          <div className="  mx-3 bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800 px-5 py-3 rounded-lg shadow-lg cursor-pointer hover:scale-110 duration-150">
+            <h1 className="text-white font-bold text-sm player ">Mint NFT</h1>
+          </div>
+        </Link>
       </div>
     </div>
   );
