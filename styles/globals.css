@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.new {
+  transform: rotatex(10deg);
+  animation: rotateAngle 6s linear infinite;
+}
