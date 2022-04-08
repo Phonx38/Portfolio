@@ -11,50 +11,54 @@ function MobileNav({ open, setOpen }) {
         } transition-transform duration-300 ease-in-out filter drop-shadow-md z-20`}
       >
         <div className="flex flex-col items-center justify-center h-full ml-4 player">
-          <a
-            className="text-xl font-normal my-4"
-            href="/about"
-            onClick={() =>
-              setTimeout(() => {
-                setOpen(!open);
-              }, 100)
-            }
-          >
-            About
-          </a>
-          <a
-            className="text-xl font-normal my-4"
-            href="/contact"
-            onClick={() =>
-              setTimeout(() => {
-                setOpen(!open);
-              }, 100)
-            }
-          >
-            Projects
-          </a>
-          <a
-            className="text-xl font-normal my-4"
-            href="/posts"
-            onClick={() =>
-              setTimeout(() => {
-                setOpen(!open);
-              }, 100)
-            }
-          >
-            Blogs
-          </a>
-          <a
-            className="text-xl font-normal my-4"
-            href="/contact"
-            onClick={() =>
-              setTimeout(() => {
-                setOpen(!open);
-              }, 100)
-            }
-          >
-            Contact
-          </a>
+          <Link href="/about">
+            <h1
+              className="text-xl font-normal my-4"
+              onClick={() =>
+                setTimeout(() => {
+                  setOpen(!open);
+                }, 100)
+              }
+            >
+              About{" "}
+            </h1>
+          </Link>
+          <Link href="/projects">
+            <h1
+              className="text-xl font-normal my-4"
+              onClick={() =>
+                setTimeout(() => {
+                  setOpen(!open);
+                }, 100)
+              }
+            >
+              Projects
+            </h1>
+          </Link>
+          <Link href="/posts">
+            <h1
+              className="text-xl font-normal my-4"
+              onClick={() =>
+                setTimeout(() => {
+                  setOpen(!open);
+                }, 100)
+              }
+            >
+              Blogs
+            </h1>
+          </Link>
+          <Link href="/posts">
+            <h1
+              className="text-xl font-normal my-4"
+              onClick={() =>
+                setTimeout(() => {
+                  setOpen(!open);
+                }, 100)
+              }
+            >
+              Contacts
+            </h1>
+          </Link>
           <div className=" bg-space rounded-xl my-4 ">
             <h1 className="text-black player  p-2">Connect Wallet</h1>
           </div>
