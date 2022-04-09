@@ -50,6 +50,7 @@ function Hero() {
             layout="fill"
             src="https://gifimage.net/wp-content/uploads/2018/11/pixel-gif-stars-1.gif"
             alt=""
+            objectFit="cover"
           />
         </div>
 
@@ -68,6 +69,14 @@ function Hero() {
           <h1 className="player p-3  text-white">Press 2 Play</h1>
         </div>
       </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nulla sit
+        dignissimos voluptas iusto molestias impedit blanditiis velit
+        necessitatibus omnis sapiente eius facere magnam ab pariatur, numquam
+        nostrum dolorem porro. Odio doloremque recusandae, vitae laboriosam
+        eveniet, laudantium nobis reiciendis quis cumque suscipit cupiditate
+        velit sint quae saepe. Repellendus, voluptatibus exercitationem.
+      </p>
     </div>
   );
 }

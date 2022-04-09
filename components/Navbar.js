@@ -23,7 +23,7 @@ function MobileNav({ open, setOpen }) {
               About{" "}
             </h1>
           </Link>
-          <Link href="/projects">
+          {/* <Link href="/projects">
             <h1
               className="text-xl font-normal my-4"
               onClick={() =>
@@ -34,7 +34,7 @@ function MobileNav({ open, setOpen }) {
             >
               Projects
             </h1>
-          </Link>
+          </Link> */}
           <Link href="/posts">
             <h1
               className="text-xl font-normal my-4"
@@ -47,7 +47,7 @@ function MobileNav({ open, setOpen }) {
               Blogs
             </h1>
           </Link>
-          <Link href="/posts">
+          {/* <Link href="/posts">
             <h1
               className="text-xl font-normal my-4"
               onClick={() =>
@@ -58,10 +58,12 @@ function MobileNav({ open, setOpen }) {
             >
               Contacts
             </h1>
+          </Link> */}
+          <Link href="/mintnft">
+            <div className="  mx-3 bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800 px-5 py-3 rounded-lg shadow-lg cursor-pointer hover:scale-110 duration-150">
+              <h1 className="text-white font-bold text-sm player ">Mint NFT</h1>
+            </div>
           </Link>
-          <div className=" bg-space rounded-xl my-4 ">
-            <h1 className="text-black player  p-2">Connect Wallet</h1>
-          </div>
         </div>
       </div>
     </>
@@ -76,7 +78,9 @@ const Navbar = () => {
     if (window.scrollY < 73) {
       return setColor("bg-transparent");
     } else if (window.scrollY > 70) {
-      return setColor("bg-black shadow-md");
+      return setColor(
+        "bg-black py-2 bg-opacity-90 shadow-md transition ease-in-out"
+      );
     }
   };
   useEffect(() => {
