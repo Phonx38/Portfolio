@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import {
@@ -32,9 +33,30 @@ const SkillTile = (props) => {
   );
 };
 
+const ProjectTile = (props) => {
+  return (
+    <a target="_blank" rel="noopener noreferrer" href={props.link}>
+      <div className="flex md:flex-row flex-col  my-5 bg-gray-800 bg-opacity-60 px-8 py-5 rounded-lg shadow-2xl ">
+        <img
+          className="h-36 md:w-72 rounded-lg object-cover"
+          src={props.img}
+          alt=""
+        />
+
+        <div className="ml-5 ">
+          <h1 className="font-semibold text-gray-500  my-5 md:mt-0 text-2xl  ">
+            {props.title}
+          </h1>
+          <p className="w-4/5">{props.desc}</p>
+        </div>
+      </div>
+    </a>
+  );
+};
+
 function About() {
   return (
-    <div className="flex flex-col items-center container bg-black md:p-10 w-full   md:pt-40 pt-40  pb-10  ">
+    <div className="flex flex-col container bg-black md:p-10   md:pt-40 pt-40  pb-10  ">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12  text-white md:px-10 px-5 ">
         <div className="lg:col-span-9 col-span-1">
           <div className="flex flex-col">
@@ -61,8 +83,21 @@ function About() {
                 </h1>
               </div>
             </div>
+            <div className="projects mt-20">
+              <h1 className="md:text-6xl text-4xl my-10 font-bold player text-transparent bg-clip-text bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800">
+                Projects
+              </h1>
+              <div className="">
+                <ProjectTile
+                  title="Solidity Keyboard Generator"
+                  img="https://pbs.twimg.com/media/FIW-L8AXwAYAIQl.jpg"
+                  link="https://solidity-full-stack-website-trial-qsypa4jly-phonx38.vercel.app/"
+                  desc="A Simple Web3 website for minting Keyboards. Made with NextJs,Hardhat and  Solidity smart contracts."
+                />
+              </div>
+            </div>
             <div className="skill mt-20">
-              <h1 className="text-6xl my-5 font-bold player text-transparent bg-clip-text bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800  ">
+              <h1 className="md:text-6xl text-4xl my-5 font-bold player text-transparent bg-clip-text bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800  ">
                 Skills
               </h1>
               <div className="">
