@@ -61,14 +61,14 @@ function Hero() {
           Space.
         </p>
         <p className="text-gray-300 leading-tight pt-6   font-semibold text-l md:text-xl press2p ">
-          Hey! I am Ashutosh Tripathi, I'm  here to explore,learn and share things happening around web3 space.
+          Hey! I am Ashutosh Tripathi, I&apos;m here to explore,learn and share
+          things happening around web3 space.
         </p>
         <Link href="/posts">
-        <div className="w-2/3  md:w-1/2 shadow-md bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400 rounded-xl m-10 mt-5  hover:cursor-pointer hover:scale-110   duration-100">
-          <h1 className="player p-3  text-white">Press 2 Play</h1>
-        </div>
+          <div className="w-2/3  md:w-1/2 shadow-md bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400 rounded-xl m-10 mt-5  hover:cursor-pointer hover:scale-110   duration-100">
+            <h1 className="player p-3  text-white">Press 2 Play</h1>
+          </div>
         </Link>
-        
       </div>
     </div>
   );
